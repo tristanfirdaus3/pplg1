@@ -1,0 +1,154 @@
+/* Reset dasar untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html{
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'PFFusionSansPro-Black-subset';
+    src: url('./Font_external/PFFusionSansPro-Black-subset.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Style untuk navbar */
+.navbar {
+    background-color: #1004b4;
+    color: white;
+    padding: 0.5rem 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Tambahkan transisi */
+}
+
+.navbar:hover {
+    background-color: #0801a3; /* Ubah warna navbar saat hover */
+    padding: 1.5rem 0; /* Tambahkan padding saat hover */
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 1.1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.35vw, 1.0rem);
+    transition: color 0.3s ease; /* Tambahkan transisi pada warna */
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: #ffb404; /* Ubah warna saat hover */
+}
+
+/* Style untuk konten */
+.content {
+    padding: 7.5vh 7.5vw; 
+    text-align: center;
+    background-color: #ffb404;
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Transisi untuk background */
+}
+
+.navbar:hover + .content { 
+    background-color: #ff8c00; /* Ganti warna saat navbar dihover */
+    transform: scale(1.05); /* Efek pembesaran saat navbar dihover */
+}
+
+.content h1 {
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem); 
+    margin-bottom: 1rem;
+    font-family: 'PFFusionSansPro-Black-subset', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.content p {
+    font-size: clamp(0.88rem, 1.60vw, 1.20rem); 
+    color: #EA1100;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1; 
+}
+
+/* Style untuk konten kedua */
+.content-2 {
+    padding: 7.5vh 7.5vw; 
+    text-align: center;
+    background-color: #480434;
+}
+
+.content-2 h1 {
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem); 
+    margin-bottom: 1rem;
+    color: #ffb404;
+    font-family: 'PFFusionSansPro-Black-subset', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.content-2 p {
+    font-size: clamp(0.8rem, 1.6vw, 1.2rem); 
+    color: white;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #088404;
+    transition: background-color 0.5s ease; /* Transisi untuk latar belakang body */
+}
+
+/* Style untuk footer */
+.footer {
+    background-color: #c00404;
+    color: white;
+    text-align: center;
+    padding: 1rem; 
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -0.625rem 0.625rem -0.625rem rgba(0, 0, 0, 0.5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 1.2vw, 0.96rem); 
+    letter-spacing: -0.065rem;
+    transition: background-color 0.3s ease; /* Transisi untuk footer */
+}
+
+.footer:hover {
+    background-color: #a00303; /* Ubah warna footer saat hover */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    html{
+        font-size: 17px;
+    }
+
+    .navbar ul li {
+        margin: 0.01rem 0;
+        padding: 0.5rem;
+    }
+
+    .content, .content-2 {
+        padding: 3vh 3vw; 
+        margin: 1.1rem;
+    }
+
+    .footer {
+        font-size: 1rem; 
+    }
+}
